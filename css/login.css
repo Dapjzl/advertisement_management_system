@@ -29,7 +29,7 @@ img{max-width:100%;}
 /*--end reset--*/
 body {
     font-family: 'Dosis', sans-serif;
-    background:#1abc9c;
+    background:black;
     background-attachment: fixed;
 }
 h1 {
@@ -45,13 +45,17 @@ h1 {
 .main-row {
     width: 35%;
     margin: 4em auto;
-    background: url(../img/login/bg.jpg)no-repeat center 0px;
+    /* background: url(../img/login/bg.jpg)no-repeat center 0px; */
     background-size: cover;
 }
 .agileits-top {
     padding: 3em;
     background: rgba(0, 0, 0, 0.5);
-    border-top: 4px solid #e42148;
+    border-top: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    border-left: 4px solid #fff;
+    border-right: 4px solid #fff;
+
 }
 input[type="text"],input[type="password"]{
     font-size: 1em;
@@ -105,7 +109,7 @@ input[type="text"],input[type="password"]{
 input[type="submit"] {
     font-size: 1em;
     color: #fff;
-    background: #ed143d;
+    background: black;
     outline: none;
     border: none;
     cursor: pointer;

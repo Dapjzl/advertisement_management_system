@@ -1,4 +1,5 @@
 <?php
+ob_clean();
 session_start();
 
 if (isset($_POST['sub'])) {

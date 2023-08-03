@@ -32,7 +32,7 @@
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
+    background-color: cadetblue;
 }
 
 .dropdown {
@@ -81,7 +81,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">Ad Server</a>
+                <a class="navbar-brand" href="#page-top">Advertisement MS</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -109,7 +109,7 @@
                                 <a href="admin/adminlogin.php">Admin Login</a>
                                 
                               </div>
-                            </div>
+                    </div>
                         
                     </li>
                      <li class="page-scroll">
@@ -120,7 +120,7 @@
                                 <a href="client/clientsignup.php">Client Signup</a>
                                 
                               </div>
-                            </div>
+                        </div>
 
                     </li>
                     <script>
@@ -163,11 +163,11 @@ window.onclick = function(event) {
             <div class="row">
                 <div class="col-lg-12">
                     <img class="img-responsive" src="img/profile.png" alt="">
-                    <div class="intro-text">
+                    <!-- <div class="intro-text">
                         <span class="name">Ad Server</span>
                         <hr class="star-light">
                         <span class="skills">Advertiser -> Ads -> Client</span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -175,21 +175,21 @@ window.onclick = function(event) {
 
     <!-- Portfolio Grid Section -->
     <?php 
-    include_once 'config.php';
+    include('config.php');
     $select= "SELECT * FROM new_ad ORDER BY RAND() LIMIT 6";
     $query = mysqli_query($conn,$select);
     
 
     while($res=mysqli_fetch_array($query))
     {
-        $path='advertiser/'.$res['imagepath'];
+        $path='advertiser/'.$res['imagepath']; //uploads/12-10-201609:36:21pmChicago-Advertising-EXPLORE-Trips.jpg
         $imagename[] = $path;
         $adname[] =$res['adname'];
         $target[] ='http://'.$res['target_url'];
         $website[] =$res['sitename'];
 
 
-        //print_r($imagename);
+        // print_r($imagename);
     }
     
       
@@ -198,7 +198,7 @@ window.onclick = function(event) {
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Advertisements</h2>
+                    <h2>Recent Advertisements</h2>
                     <hr class="star-primary">
                 </div>
             </div>
@@ -211,9 +211,9 @@ window.onclick = function(event) {
                             </div>
                         </div>
                         <figure>
-                        <a href="<?php echo $target[0]?>"><img src="<?php echo $imagename[0]?>"  class="img-responsive" alt=""></a>
-                        <figcaption>Adname:-<?php echo $adname[0]?></figcaption>
-                        <figcaption>Advertiser Website:-<?php echo $website[0]?></figcaption>
+                        <a href="<?php echo $target[0] ?>"><img src="<?php echo $imagename[0]?>"  class="img-responsive" alt=""></a>
+                        <figcaption>Advert Name: <?php echo $adname[0]?></figcaption>
+                        <figcaption>Advertiser Website: <?php echo $website[0]?></figcaption>
 
                         </figure>
                     </a>
@@ -227,8 +227,8 @@ window.onclick = function(event) {
                         </div>
                        <figure>
                         <a href="<?php echo $target[1]?>"><img src="<?php echo $imagename[1]?>"  class="img-responsive" alt=""></a>
-                        <figcaption>Adname:-<?php echo $adname[1]?></figcaption>
-                        <figcaption>Advertiser Website:-<?php echo $website[1]?></figcaption>
+                        <figcaption>Adname:<?php echo $adname[1]?></figcaption>
+                        <figcaption>Advertiser Website:<?php echo $website[1]?></figcaption>
 
                         </figure>
                     </a>
@@ -242,8 +242,8 @@ window.onclick = function(event) {
                         </div>
                         <figure>
                         <a href="<?php echo $target[2]?>"><img src="<?php echo $imagename[2]?>"  class="img-responsive" alt=""></a>
-                        <figcaption>Adname:-<?php echo $adname[2]?></figcaption>
-                        <figcaption>Advertiser Website:-<?php echo $website[2]?></figcaption>
+                        <figcaption>Adname:<?php echo $adname[2]?></figcaption>
+                        <figcaption>Advertiser Website:<?php echo $website[2]?></figcaption>
 
                         </figure>
                     </a>
@@ -257,8 +257,8 @@ window.onclick = function(event) {
                         </div>
                       <figure>
                         <a href="<?php echo $target[3]?>"><img src="<?php echo $imagename[3]?>"  class="img-responsive" alt=""></a>
-                        <figcaption>Adname:-<?php echo $adname[3]?></figcaption>
-                        <figcaption>Advertiser Website:-<?php echo $website[3]?></figcaption>
+                        <figcaption>Adname:<?php echo $adname[3]?></figcaption>
+                        <figcaption>Advertiser Website:<?php echo $website[3]?></figcaption>
 
                         </figure>
                     </a>
@@ -272,8 +272,8 @@ window.onclick = function(event) {
                         </div>
                      <figure>
                         <a href="<?php echo $target[4]?>"><img src="<?php echo $imagename[4]?>"  class="img-responsive" alt=""></a>
-                        <figcaption>Adname:-<?php echo $adname[4]?></figcaption>
-                        <figcaption>Advertiser Website:-<?php echo $website[4]?></figcaption>
+                        <figcaption>Adname:<?php echo $adname[4]?></figcaption>
+                        <figcaption>Advertiser Website:<?php echo $website[4]?></figcaption>
 
                         </figure>
                     </a>
@@ -287,8 +287,8 @@ window.onclick = function(event) {
                         </div>
                    <figure>
                         <a href="<?php echo $target[5]?>"><img src="<?php echo $imagename[5]?>"  class="img-responsive" alt=""></a>
-                        <figcaption>Adname:-<?php echo $adname[5]?></figcaption>
-                        <figcaption>Advertiser Website:-<?php echo $website[5]?></figcaption>
+                        <figcaption>Adname:<?php echo $adname[5]?></figcaption>
+                        <figcaption>Advertiser Website:<?php echo $website[5]?></figcaption>
 
                         </figure>
                     </a>
@@ -347,10 +347,10 @@ window.onclick = function(event) {
                     <div class="footer-col col-md-4">
                         <h3>Location And Contact</h3>
 
-                        <p>3481 Melrose Place
-                            <br>Beverly Hills, CA 90210</p>
-                             <p><b>Email:-</b>gursimran81@gmail.com, djhack96@gmail.com
-                            <br><b>Phone:-</b>+91-9781055155, 9478925795</p>
+                        <p>
+                            <br></p>
+                             <p><b>Email:</b>ajet@gmail.com
+                            <br><b>Phone:</b>+234 783478795</p>
 
                     </div>
                     <div class="footer-col col-md-4">
@@ -384,7 +384,7 @@ window.onclick = function(event) {
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Adserver 2016
+                        Copyright &copy; 2023
                     </div>
                 </div>
             </div>
