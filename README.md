@@ -1,7 +1,5 @@
 # AD-SERVER-PHP
-This is an advertisement server made in PHP programming Language.
-
-An instance of the project is hosted at "http://adserver81.pe.hu/"
+This is an advertisement server made in PHP programming Language
 
 Introduction To Project
 
